@@ -19,6 +19,20 @@ public class BinaryTree {
         }
         return node;
     }
+
+    public void printInOrder(){
+        printInOrder(root);
+    }
+
+    private void printInOrder(Node root){
+        if(root == null){
+            return;
+        }
+        printInOrder(root.left);
+        System.out.println(root.value);
+        printInOrder(root.right);
+
+    }
     private static class Node{
         int value;
         Node left;
