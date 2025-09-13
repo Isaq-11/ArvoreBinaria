@@ -13,6 +13,8 @@ public class BinaryTree {
         }else{
             if(value < node.value){
                 node.left = add(node.left, value);
+            }else{
+                node.right = add(node.right, value);
             }
         }
         return node;
