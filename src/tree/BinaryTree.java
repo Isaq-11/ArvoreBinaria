@@ -31,8 +31,35 @@ public class BinaryTree {
         printInOrder(root.left);
         System.out.println(root.value);
         printInOrder(root.right);
+    }
+    public void printPreOrder(){
+        printPreOrder(root);
+    }
+
+    private void printPreOrder(Node root){
+        if(root == null){
+            return;
+        }
+        System.out.println(root.value);
+        printPreOrder(root.left);
+        printPreOrder(root.right);
 
     }
+
+    public void printPosOrder(){
+        printPosOrder(root);
+    }
+
+    private void printPosOrder(Node root){
+        if(root == null){
+            return;
+        }
+        printPosOrder(root.left);
+        printPosOrder(root.right);
+        System.out.println(root.value);
+
+    }
+    
     private static class Node{
         int value;
         Node left;
